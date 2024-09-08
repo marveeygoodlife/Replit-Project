@@ -1,0 +1,224 @@
+/* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+  --main-off-white: #F5F5F5;
+  --main-light-gray: #F0F0F0;
+}
+
+/*General style for the page*/
+* {
+  padding: 0;
+  margin:0;
+}
+
+html {
+  box-sizing:border-box; /*Defines how width & height are calculated.*/
+  font-size: 62.5%; /*Simplify rem based font, font size will be adjusted to 10px (62.5% of 16px = 10px) so it's easy to calculate rem*/
+  scroll-behavior: smooth;/*make a page link smoothly scroll to it's section, rather than jumping*/
+}
+
+  /*Header style*/
+  header {
+      position: fixed; /*This will make the header remain in a fixed position at the top of viewport*/
+      top: 0;
+      left: 0;
+      width: 100%;
+      border: 2px solid var(--main-red);
+      z-index: 10;
+      background-color: var(--main-red);
+      height: 40px;
+text-align: center;
+padding-bottom: 15px;  }
+
+
+/* Style for the list item in the header*/
+ul {
+  display: flex;
+  height: 60px;
+  text-align: center;
+  border: none;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+li  a:link {
+  color: var(--main-gray);
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+/*Changes style when you mouse over it*/
+li  a:hover {
+  color: var(--main-white);
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* Makes the visited link appear as black*/
+
+li  a:visited {
+  color: #333333;
+}
+
+/* This style remove the bullet point from the list*/
+li {
+  list-style-type: none;
+}
+
+/*Style for the body*/
+body {
+  background-color: var(--main-gray);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--main-off-white);
+  font-family: 'poppins', sans-serif;
+}
+
+/*h1,h2 default style*/
+h1,
+h2 {
+  font-family: 'Raleway';
+  font-weight: 900;
+  color: var(--main-white);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+/*Content will be align to the left and given a 20% width size*/
+.myspan {position: absolute;
+  top: auto;
+  float: right; 
+  width: 38%;
+}
+
+/*This code reverse the h1 layout*/
+.h1span {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column-reverse;
+  color: var(--main-red);
+}
+.h1span:before {
+  content: "👨‍💻";
+} /*This code will add the coder emoji to my h1*/
+
+/*Define content aside the parent content*/
+aside {
+  width: 70%;
+  float: left;
+  line-height:2;
+  text-align: justify;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto; /*This code make turn the grid into 3 columns*/
+  padding: 12px;
+  overflow: hidden; /*hide content that will overflow from it's container*/
+   row-gap: 30px; /*Add gaps between each grid rows*/
+}
+
+.div-container { 
+  width: 80%;
+margin: 0 auto;
+    padding: 15px;
+  text-align: center;
+  grid-column-start: 2;/*Make the grid   start from column line 2*/
+  grid-column-end: 3;/*Make the grid  end at column line  3*/
+}
+
+.grid-container {
+  margin-top: 10%; /*Add space between the header and grid margin*/
+}
+
+/*horizontal rule is used to seperate content*/
+hr {
+  width: 80%;
+  border: 1px solid var(--main-blue);
+  margin: 2%;
+}
+
+/*Footer style*/
+
+footer { width: 80%;
+  margin: 0 auto;
+ }
+
+/*footer link */
+footer  a {
+  color: var(--main-off-white);
+   padding: 20px;
+  text-decoration: none;
+}
+
+/* footer link visited*/
+footer> a:visited {
+  color: black;
+  font-weight: 900;
+  font-family: 'Dongle';
+}
+
+/* footer link hover! it changes color when you mouse over it*/
+
+footer  a:hover {
+  padding: 5px;
+     border-radius: 10px;
+  background-color: var(--main-off-white);
+  color: var(--main-red);
+  font-weight: 700;
+  text-decoration:underline;
+  font-size: 2rem;
+  font-family: 'Dongle', sans-serif;
+}
+
+.anchor {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+   margin: 0 auto;
+gap:30px}
+/* footer Link change color when it's active.*/
+footer > a:active {
+  color: #696969;
+}
+
+/*Default paragraph style for the page*/
+p {
+   color: var(main-white);
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.leftp {
+  width: 80%;
+  border-radius: 10px;
+  text-align: justify;
+  background-color: rgb(44, 48, 48);
+}
+/*Image style*/
+img {
+  margin: 0 auto; /*This will make the image stay at the center*/
+   display: block;
+  padding: 10px;
+}
+
+figcaption a {
+  color: white;
+  text-decoration: none;
+}
+figcaption a:hover {
+  color: rgb(192, 7, 7);
+  text-decoration:underline;
+}
